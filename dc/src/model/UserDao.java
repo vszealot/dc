@@ -15,6 +15,7 @@ public class UserDao {
 
 	public boolean insertUser(User user) {
 		int n = factory.openSession().insert("usernamespace.insertLogInfo", user);
+		
 		if (n > 0) {
 			int m = factory.openSession().insert("usernamespace.insertUserInfo", user);
 			return m > 0 ? true : false;

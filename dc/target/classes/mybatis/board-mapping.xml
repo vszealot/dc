@@ -7,4 +7,12 @@
 		<![CDATA[INSERT INTO boardInfo VALUES(#{boardName}, #{nickname}, #{userId}, #{boardTag1}, #{boardTag2}, #{boardTag3}, #{boardTag4}, #{boardTag5})]]>
 	</insert>
 
+	<select id="createBoardTable" parameterType="map">
+		<![CDATA[${sql}]]>
+	</select>
+	
+	<select id="createSequence" parameterType="map">
+		<![CDATA[${sql2}]]>
+	</select>
+
 </mapper>

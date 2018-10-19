@@ -44,15 +44,23 @@ CONSTRAINT fknickname FOREIGN KEY(nickname) references userInfo -- ON DELETE CAS
 insert into boardInfo values('IT짜증','유저11','태그1','태그2');
 select * from boardInfo;
 delete boardinfo;
+drop table boardContent_vszealot;
+select * from tab;
 
 
 
-create sequence postNo_sequence increment by 1 start with 1 nocycle nocache;	-- 생각해보니 포스트별로 시퀀스가 필요한듯?
-create table boardContent(
+
+create sequence vszealot_postNo;	-- 생각해보니 포스트별로 시퀀스가 필요한듯?
+drop sequence vszealot_postNo;
+
+create table boardContent_userId(
 postNo number primary key,
 boardName varchar2(30),
+postWriter varchar2(30),
+postPassword varchar2(30),
 postTitle varchar2(30),
 postContent varchar2(1000),
+postTime varchar2(30),
 postClick number,
 CONSTRAINT fkboardName FOREIGN KEY(boardName) references boardInfo ON DELETE CASCADE
 );
@@ -79,7 +87,7 @@ imageURL
 
 
 drop table POSTCOMMENT;
-drop table BOARDCONTENT;
+drop table boardContent_userId;
 drop table BOARDTAG;
 drop table BOARDINFO;
 drop table USERINFO;
