@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/dc/search.do">검색하기</a><br><br>
-<a href="/dc/login.do">로그인하기</a>
+<a href="/dc/insert.do">가입하기</a><br><br>
+<a href="/dc/list.do">리스트보기</a><br><br>
+<a href="/dc/createBoard.do">게시판 개설하기</a><br><br>
+
 </body>
 </html>

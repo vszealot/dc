@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-검색하기
+결과
 </body>
 </html>
